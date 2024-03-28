@@ -1,0 +1,24 @@
+package week2;
+import java.util.*;
+public class TestStudentPrac {
+
+	public static void main(String[] args) {
+		StudentPrac student=new StudentPrac("Sujay S",2021103585,5);
+		Course course1=new Course("Java","Sudha",40,6);
+		Course course2=new Course("CNS","Sharmila",40,5);
+		AddressPrac add1=new AddressPrac("SN nagar","Coimbatore",641107);
+		student.addcourse(course1);
+		student.addcourse(course2);
+		student.setaddrress(add1);
+		System.out.println("Student Details:\n");
+		System.out.println(student.toString());
+		double cgpa=student.calculateCGPA();
+		System.out.println("CGPA:"+cgpa);
+		student.dropcourse(course2);
+		System.out.println("Student Details after dropping course 2:\n");
+		System.out.println(student.toString());
+		
+
+	}
+
+}

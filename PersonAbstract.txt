@@ -1,0 +1,59 @@
+package week2;
+//KEYWORD
+abstract class Person {
+	protected String fn;
+	protected String ln;
+	protected int age;
+	protected String email;
+	private AddressPrac curr;
+	public Person(String fn,String ln,int age,String mail) {
+		this.fn=fn;
+		this.ln=ln;
+		this.age=age;
+		this.email=email;
+	}
+
+    //setters
+    public void setFN(String fn){
+            this.fn = fn;
+    }
+    public void LN(String ln){
+            this.ln = ln;
+    }
+    public void setAge(int age){
+            this.age = age;
+    }
+    public void setEmail(String email){
+            this.email = email;
+    }
+
+    //getters
+    public String getFN(){
+            return fn;
+    }
+    public String getLN(){
+            return ln;
+    }
+    public int getAge(){
+            return age;
+    }
+    public String getEmail(){
+            return email;
+    }
+    
+    //ABSTRACT METHOD (will be defined in inherited class)
+    public abstract boolean validateEmail();
+    
+    
+    public String toString() {
+    	return "\nFN:"+fn+"\nLN:"+ln+ "\nAge:"+age+ "\nEmail:"+email;
+    }
+    
+    
+    //FOR MODIFY PURPOSE
+    public void modifyAddress(String streetName, String city, int pincode) {
+    	this.curr= new AddressPrac(streetName,city,pincode);
+    }
+
+
+}

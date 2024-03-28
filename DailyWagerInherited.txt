@@ -1,0 +1,33 @@
+package week2;
+
+public class DailyWagesInh extends Person {
+	private double wph;
+	private int noofhrs;
+	public DailyWagesInh(String fn,String ln,int age,String mail,double wph,int noofhrs) {
+		super("Sujay","siva",19,"");
+		this.wph=wph;
+		this.noofhrs=noofhrs;
+	}
+	public void setwph(double wph) {
+		this.wph=wph;
+	}
+	public void setnoofhrs(int noofhrs) {
+		this.noofhrs=noofhrs;
+	}
+	public double getwph()
+	{
+		return wph;
+	}
+	public int getnoofhrs()
+	{
+		return noofhrs;
+	}
+	public double calcWages()
+	{
+		return wph*noofhrs;
+	}
+    public boolean validateEmail(){
+        return false;
+}
+
+}

@@ -1,0 +1,26 @@
+package week2;
+import java.util.*;
+public class TestSalesPerson {
+
+	public static void main(String[] args) {
+		SalesPerson s1 = new SalesPerson(19,"Sujay S",100000.0);
+		System.out.println(s1.toString());
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		s1.addSale(2000.0);
+		System.out.println(s1.getBonus());
+
+	}
+
+}

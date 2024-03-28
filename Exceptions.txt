@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Error{
+        public static void error(int a) {
+                if(a<0)
+                        throw new IllegalArgumentException("negative no");
+        }
+        public static void main(String args[]){
+                Scanner sc=new Scanner(System.in);
+                try {
+                        sc.nextInt();
+                }catch(InputMismatchException e) {
+                        System.out.println(e.toString());
+                }
+                try {
+                        int c = 10 / 0;
+                        System.out.println(c);
+                }catch(ArithmeticException e) {
+                        System.out.println(e.toString());
+                }
+                try {
+                        int arr[] = new int[5];
+                        arr[6]=10;
+                }
+                catch(ArrayIndexOutOfBoundsException e) {
+                        System.out.println(e.toString());
+                }
+                try
+                {
+                        error(-5);
+                }
+                catch(IllegalArgumentException e) {
+                        System.out.println(e.toString());
+                }
+
+        }
+
+}

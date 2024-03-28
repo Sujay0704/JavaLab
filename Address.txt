@@ -1,0 +1,23 @@
+package week2;
+
+public class AddressPrac {
+		private String street;
+		private String city;
+		private int pincode;
+		
+		public AddressPrac() {
+			street="";
+			city="";
+			pincode=0;
+		}
+		
+		public AddressPrac(String street,String city,int pincode) {
+			this.street=street;
+			this.city=city;
+			this.pincode=pincode;
+		}
+		public String toString() {
+			return "\nStreet:"+street+"\nCity:"+city+"\nPincode:"+pincode;
+		}
+		
+}
